@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+{%  block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doante</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/donate.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+      integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    <div class="loader_bg">
+      <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
+  </div>
+    <!-- Trade securely -->
+    <section class="trade-securely">
+      <h2>How much are you donating</h2>
+      <p class="text text--standart text--regular text--muted">Click on the lick then type in the amount you would like to invest.</p>
+      <div class="calculate">
+        <div class="calculate__header">
+          <input type="text" placeholder="Enter Amount" />
+          <datalist id="rates">
+            <option value="TH/s" selected></option>
+          </datalist>
+
+          <a href="#continue"><button class="btn btn--accent">Proceed</button></a>
+        </div>
+      </div>
+      <h2 class="text--primary" id="continue">We accept crypto cryptocurrencies.</h2>
+      <div class="currencies">
+        <div class="card card--secondary">
+          <div class="currency-icon">
+            <img src="{% static 'images/bitcoin.png' %}" alt="" />
+
+          </div>
+          <div class="card__header">
+            <h3>Bitcoin</h3>
+            <span class="text text--standart text--medium">BTC</span>
+          </div>
+          <p class="text text-small text--regular card__text">Digital currency in which a record of transactions is maintained.</p>
+          <div class="container">
+            <div id="inviteCode" class="invite-page">
+              <div class="copy-link">
+                <input type="text" class="copy-link-input" value="https://www.youtube.com/" readonly>
+                <button type="button" class="copy-link-button">
+                  <img src="{% static 'images/copy.png' %}" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card--white">
+          <div class="currency-icon">
+            <img src="{% static 'images/etherum.png' %}" alt="" />
+
+          </div>
+          <div class="card__header">
+            <h3>Ethereum</h3>
+            <span class="text text--standart text--medium">ETH</span>
+          </div>
+          <p class="text text-small text--regular card__text">Blockchain technology to create and run decentralized digital applications.</p>
+          <div class="container">
+            <div id="inviteCode" class="invite-page">
+              <div class="copy-link">
+                <input type="text" class="copy-link-input" value="https://www.youtube.com/" readonly>
+                <button type="button" class="copy-link-button">
+                  <img src="{% static 'images/copy.png' %}" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card--green">
+          <div class="currency-icon">
+            <img src="{% static 'images/litecoin.png' %}" alt="" />
+
+          </div>
+          <div class="card__header">
+            <h3>Litecoin</h3>
+            <span class="text text--standart text--medium">LTC</span>
+          </div>
+          <p class="text text-small text--regular card__text">Cryptocurrency that enables instant payments to anyone in the world.</p>
+          <div class="container">
+            <div id="inviteCode" class="invite-page">
+              <div class="copy-link">
+                <input type="text" class="copy-link-input" value="https://www.youtube.com/" readonly>
+                <button type="button" class="copy-link-button">
+                  <img src="{% static 'images/copy.png' %}" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <form id="file-upload-form" class="uploader">
+      <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+    
+      <label for="file-upload" id="file-drag">
+        <img id="file-image" src="#" alt="Preview" class="hidden">
+        <div id="start">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          <div>Select a file or drag here</div>
+          <div id="notimage" class="hidden">Please select an image</div>
+          <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+        </div>
+        <div id="response" class="hidden">
+          <div id="messages"></div>
+          <progress class="progress" id="file-progress" value="0">
+            <span>0</span>%
+          </progress>
+        </div>
+      </label>
+    </form>
+    <a href="{% url 'appreciation' %}" ><button class="btn btn--accent">Proceed</button></a>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script  src="{% static 'js/donate.js' %}"></script>
+    <script  src="{% static 'js/upload.js' %}"></script>
+
+    <script>
+      new Rellax(".btc-illustration", {
+        horizontal: true,
+      });
+      new Rellax("#gpu-illustration", {
+        horizontal: true,
+      });
+    </script>
+  <script src="{% static 'js/jquery1.min.js' %} "></script>
+  <script src="{% static 'js/loading.js' %} "></script>
+
+  </body>
+  {% endblock content %}
+</html>
