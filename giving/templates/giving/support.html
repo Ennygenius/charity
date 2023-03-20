@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 {% load static %}
 {%  block content %}
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Support info</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="{% static 'css/support.css' %}">
+<title>Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/support.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="{% static 'css/loading.css' %}">
 
-
-
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+<!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/64188f0031ebfa0fe7f3aa4a/1grvut77l';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+<!--End of Tawk.to Script-->
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="loader_bg">
-    <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
-</div>
-<div class="container">
-            <div class="navigation">
-                <ol>
-                    <li><a href="#"  data-ref="name">Name</a></li>
-                    <li><a href="#"  data-ref="uname">Username</a></li>
-                    <li><a href="#"  data-ref="email">Email</a></li>
-                    <li><a href="#"   data-ref="viewpswd">Password</a></li>
-                    <li><a href="#"  data-ref="phone">Phone</a></li>
-                </ol>
-            </div>
-            <form id="sign-form" class="sign-form">
-                <ol class="questions">
-                    <li>
-                        <span><label for="name">Hello, What is your Name?</label></span>
-						<input class="active" id="name" name="name" type="text" placeholder="Enter your full name" autofocus/>
-                    </li>
-                    <li>
-				        <span><label for="uname">What are your purpose of making this donation</label></span>
-                        <input id="uname" name="username" type="text" placeholder="Enter a username" autofocus/>
-					</li>
-                    <li>
-				        <span><label for="email">Enter you email</label></span>
-                        <input id="email" name="email" type="text" placeholder="Email"  autofocus/>
-					</li>
-                    <li>
-                        <span><label for="phone">Enter your phone number</label></span>
-                            <select name="countryCode" class="country"  >
-                                <option data-countryCode="GB" value="91">(+91) INDIA </option>
-                                <option data-countryCode="GB" value="44">(+44) UK </option>
-                                <option data-countryCode="US" value="1">(+1) USA </option>
-                                <optgroup label="Other countries">
-                                   <option data-countryCode="DZ" value="213"> (+213)Algeria</option>
-                                   <option data-countryCode="AD" value="376"> (+376) Andorra</option>
-                                   <option data-countryCode="AO" value="244">(+244) Angola </option>
-                                   <option data-countryCode="AI" value="1264"> (+1264) Anguilla</option>
-                                   <option data-countryCode="AG" value="1268">(+1268) Antigua &amp; Barbuda </option>
-                                   <option data-countryCode="AR" value="54">(+54) Argentina </option>
-                                   <option data-countryCode="AM" value="374"> (+374) Armenia</option>
-                                   <option data-countryCode="AW" value="297">(+297) Aruba </option>
-                                   <option data-countryCode="AU" value="61"> (+61) Australia</option>
-                                   <option data-countryCode="AT" value="43">(+43) Austria </option>
-                                   <option data-countryCode="AZ" value="994"> (+994) Azerbaijan</option>
-                                   <option data-countryCode="BS" value="1242">(+1242)Bahamas </option>
-                                </optgroup>
-                            </select>
-                            <input id="phone" name="phone" type="text" autofocus/>
-                    </li>
-                    <li><p style="margin-top: 45px;font-size: 32pt;float:right">
-                        <a href="{% url 'donate' %}" style="color:black;text-decoration:none" id="signup">Continue</a></p>    </li>
-                
-                    
-                </ol>
-                <div id="next-page" alt="Kiwi standing on oval"></div>
-                <div class="error-message"></div>
-                
-            </form>
+    <div class="loader_bg">
+        <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
+    </div>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Fill in details to proceed</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+					<input class="text" type="text" name="Name" placeholder="Name" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="text" name="name" placeholder="Purpose Of Donating" required="">
+					<input class="text w3lpass" type="text" name="name" placeholder="Country" required="">
+					<div class="wthree-text">
+						<div class="clear"> </div>
+					</div>
+					<a href="{% url 'donate' %}"><input type="submit" value="Procced"></a>
+			</div>
+		</div>
+
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="{% static 'js/support.js' %}"></script>
-  <script src="{% static 'js/jquery1.min.js' %}"></script>
-  <script src="{% static 'js/loading.js' %}"></script>
+<script src="{% static 'js/jquery1.min.js' %} "></script>
+<script src="{% static 'js/loading.js' %} "></script>
 
 </body>
-{%endblock content%}
+	{%  endblock content %}
+
 </html>
